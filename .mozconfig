@@ -1,0 +1,26 @@
+mk_add_options MOZ_MAKE_FLAGS="-j9"
+
+MYFLAGS="$OPT $MYFLAGS"
+mk_add_options OS_CFLAGS="$MYFLAGS"
+mk_add_options OS_CXXFLAGS="$MYFLAGS"
+mk_add_options OS_LDFLAGS="$MYFLAGS"
+ac_add_options --enable-optimize=$OPT
+
+ac_add_options --enable-application=browser
+ac_add_options --disable-tests
+ac_add_options --disable-debug
+ac_add_options --disable-debug-symbols
+ac_add_options --enable-system-icu
+
+# valgrind purpose
+ac_add_options --disable-jemalloc
+ac_add_options --disable-valgrind
+
+# ac_add_options --disable-ogg
+# ac_add_options --with-system-libvpx
+# ac_add_options --disable-necko-wifi
+ac_add_options --disable-elf-hack
+
+export CFLAGS="$MYFLAGS"
+export CXXFLAGS="$MYFLAGS"
+export LDFLAGS="$MYFLAGS"
