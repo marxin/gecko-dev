@@ -1,10 +1,4 @@
-mk_add_options MOZ_MAKE_FLAGS="-j9"
-
-MYFLAGS="$OPT $MYFLAGS"
-mk_add_options OS_CFLAGS="$MYFLAGS"
-mk_add_options OS_CXXFLAGS="$MYFLAGS"
-mk_add_options OS_LDFLAGS="$MYFLAGS"
-ac_add_options --enable-optimize=$OPT
+mk_add_options MOZ_MAKE_FLAGS="-j8"
 
 ac_add_options --enable-application=browser
 ac_add_options --disable-tests
@@ -24,9 +18,7 @@ ac_add_options --disable-elf-hack
 # current ld.gold 2.29.1 is ICEing -> fixed on trunk
 ac_add_options --enable-linker=bfd
 
+ac_add_options --enable-lto
+
 export CC=gcc
 export CXX=g++
-
-export CFLAGS="$MYFLAGS"
-export CXXFLAGS="$MYFLAGS"
-export LDFLAGS="$MYFLAGS"
