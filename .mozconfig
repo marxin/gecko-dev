@@ -23,3 +23,6 @@ ac_add_options MOZ_PGO=1
 
 export CC=gcc
 export CXX=g++
+
+ac_add_options --disable-profiling
+ac_add_options --disable-vtune
