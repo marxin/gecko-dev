@@ -1,4 +1,4 @@
-mk_add_options MOZ_MAKE_FLAGS="-j8"
+mk_add_options MOZ_MAKE_FLAGS="-j16"
 
 ac_add_options --enable-application=browser
 ac_add_options --disable-tests
