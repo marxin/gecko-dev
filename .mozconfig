@@ -26,3 +26,4 @@ export CXX=g++
 
 ac_add_options --disable-profiling
 ac_add_options --disable-vtune
+ac_add_options --disable-av1
