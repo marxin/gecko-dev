@@ -19,7 +19,7 @@ ac_add_options --disable-elf-hack
 ac_add_options --enable-linker=bfd
 
 ac_add_options --enable-lto
-ac_add_options MOZ_PGO=1
+# ac_add_options MOZ_PGO=1
 
 export CC=gcc
 export CXX=g++
