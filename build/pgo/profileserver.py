@@ -32,7 +32,7 @@ if __name__ == '__main__':
 
     binary = runner_args.get('binary')
     if not binary:
-        binary = build.get_binary_path(where="staged-package")
+        binary = build.get_binary_path()
     binary = os.path.normpath(os.path.abspath(binary))
 
     path_mappings = {
